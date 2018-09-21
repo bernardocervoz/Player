@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{29CBC6D0-0780-4482-952A-88D6E2AD9111}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Player</RootNamespace>
+    <AssemblyName>Player</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>PlayerIco.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constants.cs" />
+    <Compile Include="frmConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfig.Designer.cs">
+      <DependentUpon>frmConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHelp.Designer.cs">
+      <DependentUpon>frmHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPlayer.Designer.cs">
+      <DependentUpon>frmPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalHotkey.cs" />
+    <Compile Include="Keyboard.cs" />
+    <Compile Include="Hotkeys.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Useres.cs" />
+    <Compile Include="Util.cs" />
+    <EmbeddedResource Include="frmConfig.resx">
+      <DependentUpon>frmConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHelp.resx">
+      <DependentUpon>frmHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPlayer.resx">
+      <DependentUpon>frmPlayer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlayerIco.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\1462400596_headphones.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pausado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagens\Anterior.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagens\Pausado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagens\Proxima.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagens\VolupeDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagens\VolupeUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagens\Fechado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagens\Aberto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagens\Sair.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagens\Help.png" />
+    <None Include="Imagens\Play.png" />
+    <None Include="Imagens\Config.png" />
+    <Content Include="PlayerIco.ico" />
+    <None Include="Resources\Help.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
